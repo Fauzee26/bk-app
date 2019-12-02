@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "989544351036",
+    "firebase_url": "https://ujikom-bk.firebaseio.com",
+    "project_id": "ujikom-bk",
+    "storage_bucket": "ujikom-bk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989544351036:android:42d2a03d637e90eafb8a39",
+        "android_client_info": {
+          "package_name": "uji.kom.bkforujikom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989544351036-79f2c677mjr676manp6nup3gpl67h9m3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uji.kom.bkforujikom",
+            "certificate_hash": "70217e95b4d5805f819e58257ed3d520b79a041d"
+          }
+        },
+        {
+          "client_id": "989544351036-s1dmi4e7a3ivo9ug75u6urpksd4i9df5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKMkEFyPTGtB7aSgnRFQkXdMgtt8ZHbpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989544351036-s1dmi4e7a3ivo9ug75u6urpksd4i9df5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
