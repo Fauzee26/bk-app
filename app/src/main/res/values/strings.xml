@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ujikom BK</string>
+
+    <string name="register_here_if_you_dont_have_account_yet"><u>Register here if you dont have account yet</u></string>
+    <string name="login_here_if_you_already_have_account"><u>Login here if you already have account</u></string>
+
 </resources>

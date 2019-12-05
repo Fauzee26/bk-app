@@ -52,4 +52,7 @@ dependencies {
         exclude group: "androidx"
     }
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
 }
