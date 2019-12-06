@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/lightBlueishGrey">
+
+        <TextView
+            android:id="@+id/title_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="14dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Detail Pelanggaran"
+            android:textColor="@color/darkBlue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignEnd="@id/title_header"
+            android:layout_alignRight="@id/title_header"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="14dp"
+            android:src="@drawable/menu"
+            android:tint="@color/lightBlueishGrey" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama Siswa"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDetailName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Farras Docko"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tanggal Pelanggaran"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDetailTgl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="12 Desember 2019"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kelas"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDetailKelas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="XII RPL"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wali Kelas"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDetailWali"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Mr. Fahru"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pelanggaran"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDetailPelanggaran"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Pacaran\nMencuri\nMakan Harta Anak Yatim"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:text="Keterangan :"
+            android:textColor="@color/lightBlueishGrey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtDetailKet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightBlueishGrey"
+            android:padding="20dp"
+            android:textColor="@color/darkBlue"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

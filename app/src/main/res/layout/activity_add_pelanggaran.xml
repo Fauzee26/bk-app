@@ -1,123 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkBlue"
+    android:padding="8dp"
     tools:context=".AddPelanggaranActivity">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardBackgroundColor="@color/lightBlueishGrey"
-        app:cardCornerRadius="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/header"
             android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/lightBlueishGrey">
+
+            <TextView
+                android:id="@+id/title_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="14dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Tambah Pelanggaran"
+                android:textColor="@color/darkBlue"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            android:padding="12dp">
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            app:cardBackgroundColor="@color/lightBlueishGrey"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-                <ImageView
-                    android:id="@+id/person"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_person"
-                    android:tint="@color/darkBlue" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/edtPilihKelas"
+                    <ImageView
+                        android:id="@+id/person"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_person"
+                        android:tint="@color/darkBlue" />
+
+                    <Spinner
+                        android:id="@+id/spinPilihKelas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@id/person"
+                        android:layout_toRightOf="@id/person" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/person1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_person"
+                        android:tint="@color/darkBlue" />
+
+                    <Spinner
+                        android:id="@+id/spinNamaSiswa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@id/person1"
+                        android:layout_toRightOf="@id/person1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/person2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_person"
+                        android:tint="@color/darkBlue" />
+
+                    <TextView
+                        android:id="@+id/edtWaliKelas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person2"
+                        android:layout_toRightOf="@id/person2"
+                        android:text="Wali Kelas"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/person3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_calendar"
+                        android:tint="@color/darkBlue" />
+
+                    <TextView
+                        android:id="@+id/edtTglPelanggaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person3"
+                        android:layout_toRightOf="@id/person3"
+                        android:hint="Tanggal Pelanggaran"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@id/person"
-                    android:layout_toRightOf="@id/person"
-                    android:hint="Pilih Kelas" />
-            </RelativeLayout>
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="serif"
+                    android:text="JENIS PELANGGARAN"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/person1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_person"
-                    android:tint="@color/darkBlue" />
-
-                <EditText
-                    android:id="@+id/edtNamaSiswa"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_pelanggaran"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@id/person1"
-                    android:layout_toRightOf="@id/person1"
-                    android:hint="Nama Siswa" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/person2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_person"
-                    android:tint="@color/darkBlue" />
+                    android:layout_marginTop="12dp"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/langgar_item" />
 
                 <EditText
-                    android:id="@+id/edtWaliKelas"
+                    android:id="@+id/edtKeterangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="Keterangan"
+                    android:padding="5dp"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@id/person2"
-                    android:layout_toRightOf="@id/person2"
-                    android:hint="Wali Kelas" />
-            </RelativeLayout>
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/darkBlue"
+                    android:fontFamily="serif"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+        </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/person3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_calendar"
-                    android:tint="@color/darkBlue" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <EditText
-                    android:id="@+id/edtTglPelanggaran"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@id/person3"
-                    android:layout_toRightOf="@id/person3"
-                    android:hint="Tanggal Pelanggaran" />
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
