@@ -17,10 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentTop="true"
+            android:background="@color/lightBlueishGrey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/lightBlueishGrey">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/title_header"
@@ -67,20 +67,33 @@
                         android:src="@drawable/ic_person"
                         android:tint="@color/darkBlue" />
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person"
+                        android:layout_toRightOf="@id/person"
+                        android:text="Pilih Kelas"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="16sp" />
+
                     <Spinner
                         android:id="@+id/spinPilihKelas"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_alignParentBottom="true"
                         android:layout_toEndOf="@id/person"
                         android:layout_toRightOf="@id/person" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
 
                     <ImageView
                         android:id="@+id/person1"
@@ -90,20 +103,70 @@
                         android:src="@drawable/ic_person"
                         android:tint="@color/darkBlue" />
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person1"
+                        android:id="@+id/nam"
+                        android:layout_toRightOf="@id/person1"
+                        android:text="Nama Siswa"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="16sp" />
+
                     <Spinner
                         android:id="@+id/spinNamaSiswa"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
                         android:layout_toEndOf="@id/person1"
                         android:layout_toRightOf="@id/person1" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:id="@+id/person5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_person"
+                        android:tint="@color/darkBlue" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person5"
+                        android:layout_toRightOf="@id/person5"
+                        android:text="Wali Kelas"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/edtWaliKelas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person5"
+                        android:layout_toRightOf="@id/person5"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
 
                     <ImageView
                         android:id="@+id/person2"
@@ -114,22 +177,32 @@
                         android:tint="@color/darkBlue" />
 
                     <TextView
-                        android:id="@+id/edtWaliKelas"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_marginStart="12dp"
                         android:layout_marginLeft="12dp"
                         android:layout_toEndOf="@id/person2"
                         android:layout_toRightOf="@id/person2"
-                        android:text="Wali Kelas"
+                        android:text="Pelapor"
                         android:textColor="@color/darkBlue"
                         android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/edtPelapor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person2"
+                        android:layout_toRightOf="@id/person2"
+                        android:textSize="14sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
 
                     <ImageView
                         android:id="@+id/person3"
@@ -140,17 +213,28 @@
                         android:tint="@color/darkBlue" />
 
                     <TextView
-                        android:id="@+id/edtTglPelanggaran"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_marginStart="12dp"
                         android:layout_marginLeft="12dp"
                         android:layout_toEndOf="@id/person3"
                         android:layout_toRightOf="@id/person3"
-                        android:hint="Tanggal Pelanggaran"
+                        android:text="Tanggal Pelanggaran"
                         android:textColor="@color/darkBlue"
                         android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/edtTglPelanggaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/person3"
+                        android:layout_toRightOf="@id/person3"
+                        android:text="__/__/____"
+                        android:textSize="14sp" />
+
                 </RelativeLayout>
 
                 <TextView

@@ -67,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
                                         val pref = Preference(applicationContext)
                                         pref.setUid(user.uid!!)
                                         pref.setEmail(user.email!!)
-                                        pref.setUid(auth.currentUser!!.uid)
+                                        pref.setFullname(user.username!!)
 
                                         startActivity(Intent(applicationContext, MainActivity::class.java))
                                         finish()

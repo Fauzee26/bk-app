@@ -61,6 +61,14 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:text=":"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/txtDetailName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -88,6 +96,14 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:text=":"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/txtDetailTgl"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -110,7 +126,50 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="Pelapor"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:text=":"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDetailPelapor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Doko Handoko"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Kelas"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:text=":"
                 android:textColor="@color/lightBlueishGrey"
                 android:textSize="16sp" />
 
@@ -142,6 +201,14 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:text=":"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/txtDetailWali"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -165,6 +232,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Pelanggaran"
+                android:textColor="@color/lightBlueishGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:text=":"
                 android:textColor="@color/lightBlueishGrey"
                 android:textSize="16sp" />
 

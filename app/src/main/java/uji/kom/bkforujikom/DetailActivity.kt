@@ -19,6 +19,7 @@ class DetailActivity : AppCompatActivity() {
         txtDetailName.text = pelanggaran.nama
         txtDetailWali.text = pelanggaran.wali
         txtDetailKet.text = pelanggaran.ket
+        txtDetailPelapor.text = pelanggaran.pelapor
 
         val dateFormat = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
         txtDetailTgl.text = dateFormat.format(Date(pelanggaran.tgl!!.toLong()))

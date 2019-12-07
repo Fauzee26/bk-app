@@ -10,5 +10,6 @@ data class Pelanggaran(
     var wali: String? = null,
     var pelanggaran: String? = null,
     var ket: String? = null,
-    var kelas: String? = null
+    var kelas: String? = null,
+    var pelapor: String? = null
 ) : Parcelable

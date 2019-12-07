@@ -25,6 +25,7 @@ import uji.kom.bkforujikom.model.Kelas
 import uji.kom.bkforujikom.model.Langgar
 import uji.kom.bkforujikom.model.Pelanggaran
 import uji.kom.bkforujikom.model.Siswa
+import uji.kom.bkforujikom.util.Preference
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -41,6 +42,7 @@ class AddPelanggaranActivity : AppCompatActivity() {
     private var posKelas: Int? = null
     private var selectedKelas: String? = null
     private var selectedSiswa: String? = null
+    private var pelapor: String? = null
 
     private var langgarItems: ArrayList<Langgar> = ArrayList()
     var cal = Calendar.getInstance()
@@ -48,6 +50,8 @@ class AddPelanggaranActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_pelanggaran)
+
+        pelapor = Preference(this@AddPelanggaranActivity).getFullname()
 
         getKelas()
 //        getLanggarItem()
@@ -63,6 +67,8 @@ class AddPelanggaranActivity : AppCompatActivity() {
                 edtTglPelanggaran!!.text = sdf.format(cal.time)
             }
 
+//        edtTglPelanggaran!!.text = sdf.format(cal.time)
+
         edtTglPelanggaran.onClick {
             val dialog = DatePickerDialog(this@AddPelanggaranActivity,
                 dateSetListener,
@@ -76,7 +82,7 @@ class AddPelanggaranActivity : AppCompatActivity() {
         }
 
         btnSubmit.onClick {
-            if (TextUtils.isEmpty(edtTglPelanggaran.text)) {
+            if (edtTglPelanggaran.text == "__/__/____") {
                 toast("Fill the date")
                 return@onClick
             }
@@ -102,7 +108,7 @@ class AddPelanggaranActivity : AppCompatActivity() {
             }
             val reference = FirebaseDatabase.getInstance().getReference("pelanggaran")
             val pelanggaranNew = Pelanggaran(selectedSiswa, cal.timeInMillis.toString(), edtWaliKelas.text.toString(),
-                listPelanggaran, edtKeterangan.text.toString(), selectedKelas)
+                listPelanggaran, edtKeterangan.text.toString(), selectedKelas, pelapor)
 
             reference.child(System.currentTimeMillis().toString()).setValue(pelanggaranNew).addOnSuccessListener {
                 hud!!.dismiss()
@@ -165,6 +171,7 @@ class AddPelanggaranActivity : AppCompatActivity() {
                         listSiswa!!.add(siswa!!)
                     }
 
+                    edtPelapor.text = pelapor
                     adapterSiswa = SpinnerAdapterSiswa(
                         applicationContext,
                         android.R.layout.simple_spinner_dropdown_item,

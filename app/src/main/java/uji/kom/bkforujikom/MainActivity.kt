@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         img_menu.visibility = View.VISIBLE
         img_menu.onClick {
-            var popMenu = PopupMenu(this@MainActivity, title_header)
+            var popMenu = PopupMenu(this@MainActivity, img_menu)
             popMenu.setOnMenuItemClickListener {
                 if (it.itemId == R.id.menu_logout)
                     alertLogout(auth!!)
